@@ -1,0 +1,22 @@
+<button id="toogle">Включатель</button>
+<img id="bulb" src="./bulb.png" hidden/>
+<style>
+#toogle{
+    background: blue;
+    color: white;
+}
+</style>
+<script>
+const toogle=document.getElementById("toogle")
+toogle.addEventListener("click",() =>{console.log('clicked');
+// remove hidden attribute img#bulb
+     const bulb=document.getElementById("bulb")
+     if (bulb.hidden) {
+         bulb.hidden = false;
+         toogle.innerText="Выключатель";
+     } else {
+          bulb.hidden = true;
+          toogle.innerText="Включатель";
+     }
+})
+</script>
